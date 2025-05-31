@@ -1,7 +1,7 @@
 export default {
   async fetch(request, env) {
     const inputs = {
-      prompt: "daarsh.com is loading",
+      prompt: "daarsh.com is coming soon",
     };
 
     const response = await env.AI.run(
@@ -11,6 +11,7 @@ export default {
 
     return new Response(response, {
       headers: {
+        "title": "daarsh.com coming soon"
         "content-type": "image/png",
       },
     });
